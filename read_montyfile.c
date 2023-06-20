@@ -8,10 +8,11 @@ int read_montyfile(char *file)
 {
 	ssize_t nreads;
 	size_t buf_size;
-	char *buf, *token, *arr_command;
+	char *buf, *token, **arr_command;
 	stack_t *stack = NULL;
-	int i, fd, line_number;
-	
+	int i, fd;
+	unsigned int line_number;
+
 	line_number = 0;
 	arr_command = buf = NULL;
 	buf_size = 0;

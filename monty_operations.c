@@ -6,7 +6,7 @@
  * @line_number: line number
  * Return: 0 Sucess 1 instruction not valid
  */
-int monty_operations(stack_t **stack, char *arr_command, unsigned int line_number)
+int monty_operations(stack_t **stack, char **arr_command, unsigned int line_number)
 {
 	int j, compare;
 	instructions_t operations[] = {

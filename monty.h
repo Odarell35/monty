@@ -1,5 +1,13 @@
-#ifndef MONTY_H
-#define MONTY_H
+#ifndef _MONTY_H
+#define _MONTY_H
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <sys/stat.h>
+#include <ctype.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -33,6 +41,7 @@ void pall_data(stack_t **stack, unsigned int line_number);
 void push_data(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
+int monty_operations(stack_t **stack, char arr_command, unsigned int line_number);
 
 
 #endif
