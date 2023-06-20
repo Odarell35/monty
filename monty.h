@@ -29,7 +29,10 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /*prototypes*/
-void pall_data(stack_t **stack, unsigned int line_number)
-void push_data(stack_t **stack, unsigned int line_number)
+void pall_data(stack_t **stack, unsigned int line_number);
+void push_data(stack_t **stack, unsigned int line_number);
+/*additionals*/
+stack_t *add_dnodeint(stack_t **head, const int n);
+
 
 #endif
