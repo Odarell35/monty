@@ -25,6 +25,6 @@ int monty_operations(stack_t **stack, char **arr_command, unsigned int line_numb
 			}
 
 	}
-	/*handle_error*/
+	error_three(line_number, arr_command[0]);
 	return (1);
 }

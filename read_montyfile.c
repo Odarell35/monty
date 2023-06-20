@@ -19,10 +19,7 @@ int read_montyfile(char *file)
 
 	fd = open(file, O_RDONLY);
 		if (fd < 0)
-		{
-			/*handle_error*/
-			exit(EXIT_FAILURE);
-		}
+			error_two(file);
 	n_read = getline(&buf, &buf_size, fd);
 	while (n_read > 0)
 	{

@@ -8,7 +8,7 @@
 int main(int argc, char **argv)
 {
 	if (argc != 2)
-		/*handle_error*/
+		error_one;
 	else
 	{
 		read_montyfile(argv[1]);
