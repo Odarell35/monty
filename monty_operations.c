@@ -27,6 +27,7 @@ int monty_operations(stack_t **stack, char **arr_command, unsigned int line_numb
 			}
 
 	}
-	error_three(line_number, arr_command[0]);
+	/*error_three(line_number, arr_command[0]);*/
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, arr_command[0]);
 	return (1);
 }
