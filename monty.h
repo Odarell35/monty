@@ -54,4 +54,11 @@ void error_three(unsigned int line_number, char *arr_command);
 void error_four(void);
 void error_five(unsigned int line_number);
 void error_six(unsigned int line_number);
+/*prototype for push*/
+void get_push(stack_t **stack, unsigned int line_number, char *temp);
+int _isdigit(char *str);
+/*prototype of swap*/
+void swap(stack_t **stack, unsigned int line_number);
+/*prototype for add*/
+void add(stack_t **stack, unsigned int line_number);
 #endif
