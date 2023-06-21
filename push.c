@@ -15,7 +15,7 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 	int value = atoi(temp);
 	stack_t *new_node = malloc(sizeof(stack_t));
 
-	if (temp == NULL || !_isdigit(temp))
+	if (temp == NULL || !isdigit(temp))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
