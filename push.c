@@ -53,9 +53,9 @@ int _isdigit(char *str)
 	while (str[i] != '\0')
 	{
 		if (!isdigit(str[i]))
-			return 0;
+			return (0);
 		i++;
 	}
 
-	return 1;
+	return (1);
 }

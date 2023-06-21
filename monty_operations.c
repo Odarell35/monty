@@ -14,6 +14,9 @@ int monty_operations(stack_t **stack, char **arr_command, unsigned int line_numb
 		{"pint", pint_data},
 		{"pop", pop_data},
 		{"nop", nop_data},
+		{"add", add},
+		{"push", get_push},
+		{"swap", swap},
 		{NULL, NULL},
 	};
 
