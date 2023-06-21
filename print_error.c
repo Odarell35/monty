@@ -4,7 +4,7 @@
  */
 void error_one(void)
 {
-	printf("USAGE: monty file\n");
+	fprintf(stderr,"USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
 /**
@@ -13,7 +13,7 @@ void error_one(void)
  */
 void error_two(char *file)
 {
-	printf("Error: Can't open file %s\n", file);
+	fprintf(stderr, "Error: Can't open file %s\n", file);
 	exit(EXIT_FAILURE);
 }
 /**
@@ -21,17 +21,17 @@ void error_two(char *file)
  * @line_number: line number
  * @arr_command: commands
  */
-void error_three(unsigned int line_number, char *arr_command)
+/*void error_three(unsigned int line_number, char *arr_command)
 {
-	printf("L%d: unknown instruction %s\n", line_number, arr_command[0]);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, arr_command[0]);
 	exit(EXIT_FAILURE);
-}
+}*/
 /**
  * error_four - malloc failed
  */
 void error_four(void)
 {
-	printf("Error: malloc failed\n");
+	fprintf(stderr, "Error: malloc failed\n");
 	exit(EXIT_FAILURE);
 }
 /**
@@ -40,6 +40,6 @@ void error_four(void)
  */
 void error_five(unsigned int line_number)
 {
-	printf("L%d: can't pint, stack empty", line_number);
+	fprintf(stderr, "L%d: can't pint, stack empty", line_number);
 	exit(EXIT_FAILURE);
 }
