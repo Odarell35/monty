@@ -4,7 +4,7 @@
  */
 void error_one(void)
 {
-	fprintf(stderr,"USAGE: monty file\n");
+	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
 /**
@@ -20,12 +20,14 @@ void error_two(char *file)
  * error_three - unknown instructions
  * @line_number: line number
  * @arr_command: commands
+ *
+ *void error_three(unsigned int line_number, char *arr_command)
+ *{
+ *	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, arr_command[0]);
+ *	exit(EXIT_FAILURE);
+ *}
  */
-/*void error_three(unsigned int line_number, char *arr_command)
-{
-	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, arr_command[0]);
-	exit(EXIT_FAILURE);
-}*/
+
 /**
  * error_four - malloc failed
  */

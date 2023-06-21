@@ -45,7 +45,7 @@ void pop_data(stack_t **stack, unsigned int line_number);
 void nop_data(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
-int monty_operations(stack_t **stack, char **arr_command, unsigned int line_number);
+int monty_op(stack_t **stack, char **arr_command, unsigned int line_number);
 int read_montyfile(char *file);
 /*protypes for error msg*/
 void error_one(void);

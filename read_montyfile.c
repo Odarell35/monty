@@ -24,10 +24,10 @@ int read_montyfile(char *file)
 	fd = fopen(file, "r");
 		if (fd == NULL)
 			error_two(file);
-	 while ((n_read = getline(&buf, &buf_size, fd)) != -1)
-	 {
-		/*if (buf == "\n")
-			continue;*/
+	while ((n_read = getline(&buf, &buf_size, fd)) != -1)
+	{
+		/*if (buf == "\n")*/
+			/*continue;*/
 		line_number++;
 		/*free something*/
 		token = strtok(buf, "\n\t\a");
@@ -39,7 +39,7 @@ int read_montyfile(char *file)
 				token = strtok(NULL, "\n\t\a");
 			}
 			arr_command[i] = NULL;
-			monty_operations(&stack, arr_command, line_number);
+			monty_op(&stack, arr_command, line_number);
 	}
 /*	free_list(stack);*/
 	free(buf);
