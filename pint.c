@@ -4,11 +4,11 @@
  * @stack: Pointer To The Head
  * @line_number: Line Number
  */
-void pint_data(stack_t **stack, unsigned line_number)
+void pint_data(stack_t **stack, unsigned int line_number)
 {
 	line_number = 1;
 
-	if(*stack == NULL)
+	if (*stack == NULL)
 		error_five(line_number);
 	printf("%d\n", (*stack)->n);
 }

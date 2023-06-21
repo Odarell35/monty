@@ -2,7 +2,7 @@
 /**
  * main - Interpreter for monty files
  * @argc: argument count
- * @arg: array of arrguments
+ * @argv: array of arrguments
  * Return: 0 on SUCCESS 1 on FAILURE
  */
 int main(int argc, char *argv[])

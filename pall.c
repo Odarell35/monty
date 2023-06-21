@@ -12,9 +12,9 @@ void pall_data(stack_t **stack, unsigned int line_number)
 	(void) line_number;
 
 	temp = *stack;
-	while(temp)
+	while (temp)
 	{
-		printf("%d\n",temp->n);
+		printf("%d\n", temp->n);
 		temp = temp->next;
 	}
-}	
+}

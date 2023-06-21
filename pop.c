@@ -13,7 +13,7 @@ void pop_data(stack_t **stack, unsigned int line_number)
 	line_number = 1;
 	if (*stack == NULL)
 		error_six(line_number);
-	
+
 	head = head->next;
 	free(*stack);
 	*stack = head;
