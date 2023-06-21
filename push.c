@@ -10,12 +10,12 @@
  * If the input is not a valid integer, it prints an error message and exits.
  * Otherwise, it creates a new node and pushes it onto the stack.
  */
-void get_push(stack_t **stack, unsigned int line_number, char *temp)
+void get_push(stack_t **stack, unsigned int line_number) 
 {
-	int value = atoi(temp);
+	int value;
 	stack_t *new_node = malloc(sizeof(stack_t));
 
-	if (temp == NULL || !isdigit(temp))
+	if (!isdigit(arr_command[1]))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
@@ -27,6 +27,8 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
+	
+	value = atoi(arr_command[1]);
 
 	new_node->n = value;
 	new_node->prev = NULL;

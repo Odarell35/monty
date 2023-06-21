@@ -43,6 +43,9 @@ void pint_data(stack_t **stack, unsigned int line_number);
 void push_data(stack_t **stack, unsigned int line_number);
 void pop_data(stack_t **stack, unsigned int line_number);
 void nop_data(stack_t **stack, unsigned int line_number);
+void get_push(stack_t **stack, unsigned int line_number);
+void add(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
 int monty_op(stack_t **stack, char **arr_command, unsigned int line_number);
