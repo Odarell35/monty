@@ -6,7 +6,7 @@
  * @line_number: line number
  * Return: 0 Sucess 1 instruction not valid
  */
-int monty_op(stack_t **stack, char **arr_command, unsigned int line_number)
+int monty_op(stack_t **stack)
 {
 	int j, compare;
 	instruction_t operations[] = {
@@ -22,15 +22,14 @@ int monty_op(stack_t **stack, char **arr_command, unsigned int line_number)
 
 	for (j = 0; (operations + j)->opcode != NULL; j++)
 	{
-		compare = strcmp((operations + j)->opcode, arr_command[0]);
+		compare = strcmp((operations + j)->opcode, *details.arr_command);
 			if (compare == 0)
 			{
-				(operations + j)->f(stack, line_number);
+				(operations + j)->f(stack, details.line_number);
 				return (0);
 			}
 
 	}
-	/*error_three(line_number, arr_command[0]);*/
-	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, arr_command[0]);
+	fprintf(stderr, "L%d: unknown instruction %s\n", details.line_number, details.arr_command[0]);
 	return (1);
 }

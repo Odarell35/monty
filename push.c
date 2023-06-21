@@ -15,7 +15,7 @@ void get_push(stack_t **stack, unsigned int line_number)
 	int value;
 	stack_t *new_node = malloc(sizeof(stack_t));
 
-	if (!isdigit(arr_command[1]))
+	if (!isdigit(details.arr_command[1]))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
@@ -28,7 +28,7 @@ void get_push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	
-	value = atoi(arr_command[1]);
+	value = atoi(details.arr_command[1]);
 
 	new_node->n = value;
 	new_node->prev = NULL;

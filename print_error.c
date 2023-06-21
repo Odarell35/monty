@@ -20,13 +20,13 @@ void error_two(char *file)
  * error_three - unknown instructions
  * @line_number: line number
  * @arr_command: commands
- *
- *void error_three(unsigned int line_number, char *arr_command)
- *{
- *	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, arr_command[0]);
- *	exit(EXIT_FAILURE);
- *}
  */
+ void error_three(void)
+ {
+ 	fprintf(stderr, "L%d: unknown instruction %s\n", details.line_number, details.arr_command[0]);
+ 	exit(EXIT_FAILURE);
+ }
+ 
 
 /**
  * error_four - malloc failed

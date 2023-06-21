@@ -1,6 +1,7 @@
 #include "monty.h"
 #include <stdlib.h>
 #include <stdio.h>
+details_t details;
 /**
  * read_montyfile- reads monty file
  * @file: file from argument
@@ -10,39 +11,36 @@ int read_montyfile(char *file)
 {
 	ssize_t n_read;
 	size_t buf_size;
-	char *buf, *token, **arr_command;
+	char *token;
 	stack_t *stack = NULL;
 	int i;
-	FILE *fd;
-	unsigned int line_number;
-
-	line_number = 0;
-	arr_command = malloc(sizeof(char *) * 20);
-	buf = NULL;
+	
+	details.line_number = 0;
+	details.arr_command = malloc(sizeof(char *) * 20);
+	details.buf = NULL;
 	buf_size = 0;
 
-	fd = fopen(file, "r");
-		if (fd == NULL)
+	details.fd = fopen(file, "r");
+		if (details.fd == NULL)
 			error_two(file);
-	while ((n_read = getline(&buf, &buf_size, fd)) != -1)
+	while ((n_read = getline(&details.buf, &buf_size, details.fd)) != -1)
 	{
-		/*if (buf == "\n")*/
-			/*continue;*/
-		line_number++;
-		/*free something*/
-		token = strtok(buf, "\n\t\a");
+		if (*details.buf == '\n')
+			continue;
+		details.line_number++;
+		token = strtok(details.buf, "\n\t\a");
 			i = 0;
 			while (token)
 			{
-				arr_command[i] = token;
+				details.arr_command[i] = token;
 				i++;
 				token = strtok(NULL, "\n\t\a");
 			}
-			arr_command[i] = NULL;
-			monty_op(&stack, arr_command, line_number);
+			details.arr_command[i] = NULL;
+			monty_op(&stack);
 	}
 /*	free_list(stack);*/
-	free(buf);
-	fclose(fd);
+	free(details.buf);
+	fclose(details.fd);
 return (0);
 }

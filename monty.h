@@ -37,6 +37,21 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+/**
+ * struct details_s - variables used on monty program
+ * @arr_command: array of commands
+ * @fd: file descriptor
+ * @buf: file content
+ * @line_number: number of liines in file
+ */
+typedef struct details_s
+{
+	char **arr_command;
+	FILE *fd;
+	char *buf;
+	unsigned int line_number;
+}details_t;
+extern details_t details;
 /*prototypes*/
 void pall_data(stack_t **stack, unsigned int line_number);
 void pint_data(stack_t **stack, unsigned int line_number);
@@ -48,17 +63,17 @@ void add(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
-int monty_op(stack_t **stack, char **arr_command, unsigned int line_number);
+int monty_op(stack_t **stack);
 int read_montyfile(char *file);
 /*protypes for error msg*/
 void error_one(void);
 void error_two(char *file);
-void error_three(unsigned int line_number, char *arr_command);
+void error_three(void);
 void error_four(void);
 void error_five(unsigned int line_number);
 void error_six(unsigned int line_number);
 /*prototype for push*/
-void get_push(stack_t **stack, unsigned int line_number, char *temp);
+void get_push(stack_t **stack, unsigned int line_number);
 int _isdigit(char *str);
 /*prototype of swap*/
 void swap(stack_t **stack, unsigned int line_number);
