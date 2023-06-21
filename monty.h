@@ -40,6 +40,8 @@ typedef struct instruction_s
 void pall_data(stack_t **stack, unsigned int line_number);
 void pint_data(stack_t **stack, unsigned int line_number);
 void push_data(stack_t **stack, unsigned int line_number);
+void pop_data(stack_t **stack, unsigned int line_number);
+void nop_data(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
 int monty_operations(stack_t **stack, char arr_command, unsigned int line_number);
@@ -50,4 +52,5 @@ void error_two(char *file);
 void error_three(unsigned int line_number, char **arr_command);
 void error_four(void);
 void error_five(unsigned int line_number);
+void error_six(unsigned int line_number);
 #endif
