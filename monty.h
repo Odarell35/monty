@@ -38,6 +38,7 @@ typedef struct instruction_s
 } instruction_t;
 /*prototypes*/
 void pall_data(stack_t **stack, unsigned int line_number);
+void pint_data(stack_t **stack, unsigned int line_number);
 void push_data(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
@@ -48,4 +49,5 @@ void error_one(void);
 void error_two(char *file);
 void error_three(unsigned int line_number, char **arr_command);
 void error_four(void);
+void error_five(unsigned int line_number);
 #endif

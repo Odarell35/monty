@@ -34,3 +34,12 @@ void error_four(void)
 	printf("Error: malloc failed\n");
 	exit(EXIT_FAILURE);
 }
+/**
+ * error_five- If the stack is empty
+ * @line_number: line number
+ */
+void error_five(unsigned int line_number)
+{
+	printf("L%d: can't pint, stack empty", line_number);
+	exit(EXIT_FAILURE);
+}
