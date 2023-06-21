@@ -1,4 +1,6 @@
 #include "monty.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * read_montyfile- reads monty file
  * @file: file from argument
@@ -22,11 +24,10 @@ int read_montyfile(char *file)
 	fd = fopen(file, "r");
 		if (fd == NULL)
 			error_two(file);
-	n_read = getline(&buf, &buf_size, fd);
-	while (n_read > 0)
-	{
-		if (buf == '\n')
-			continue;
+	 while ((n_read = getline(&buf, &buf_size, fd)) != -1)
+	 {
+		/*if (buf == "\n")
+			continue;*/
 		line_number++;
 		/*free something*/
 		token = strtok(buf, "\n\t\a");
@@ -41,5 +42,7 @@ int read_montyfile(char *file)
 			monty_operations(&stack, arr_command, line_number);
 	}
 /*	free_list(stack);*/
+	free(buf);
+	fclose(fd);
 return (0);
 }
