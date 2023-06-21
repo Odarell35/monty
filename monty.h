@@ -44,12 +44,12 @@ void pop_data(stack_t **stack, unsigned int line_number);
 void nop_data(stack_t **stack, unsigned int line_number);
 /*additionals*/
 stack_t *add_dnodeint(stack_t **head, const int n);
-int monty_operations(stack_t **stack, char arr_command, unsigned int line_number);
+int monty_operations(stack_t **stack, char **arr_command, unsigned int line_number);
 
 /*protypes for error msg*/
 void error_one(void);
 void error_two(char *file);
-void error_three(unsigned int line_number, char **arr_command);
+void error_three(unsigned int line_number, char *arr_command);
 void error_four(void);
 void error_five(unsigned int line_number);
 void error_six(unsigned int line_number);

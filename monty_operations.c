@@ -9,21 +9,20 @@
 int monty_operations(stack_t **stack, char **arr_command, unsigned int line_number)
 {
 	int j, compare;
-	instructions_t operations[] = {
-		{"push", push_f},
+	instruction_t operations[] = {
 		{"pall", pall_data},
-		{"pint", pint_data}'
+		{"pint", pint_data},
 		{"pop", pop_data},
 		{"nop", nop_data},
 		{NULL, NULL},
 	};
 
-	for (j = 0; (operation + j)->opcode != NULL; j++)
+	for (j = 0; (operations + j)->opcode != NULL; j++)
 	{
 		compare = strcmp((operations + j)->opcode, arr_command[0]);
 			if (compare == 0)
 			{
-				(operation + j)->f(stack, line_number);
+				(operations + j)->f(stack, line_number);
 				return (0);
 			}
 

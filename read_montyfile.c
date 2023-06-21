@@ -6,19 +6,21 @@
  */
 int read_montyfile(char *file)
 {
-	ssize_t nreads;
+	ssize_t n_read;
 	size_t buf_size;
 	char *buf, *token, **arr_command;
 	stack_t *stack = NULL;
-	int i, fd;
+	int i;
+	FILE *fd;
 	unsigned int line_number;
 
 	line_number = 0;
-	arr_command = buf = NULL;
+	arr_command = malloc(sizeof(char *) * 20);
+	buf = NULL;
 	buf_size = 0;
 
-	fd = open(file, O_RDONLY);
-		if (fd < 0)
+	fd = fopen(file, "r");
+		if (fd == NULL)
 			error_two(file);
 	n_read = getline(&buf, &buf_size, fd);
 	while (n_read > 0)
@@ -36,8 +38,8 @@ int read_montyfile(char *file)
 				token = strtok(NULL, "\n\t\a");
 			}
 			arr_command[i] = NULL;
-			monty_operation(&stack, arr_command, line_number);
+			monty_operations(&stack, arr_command, line_number);
 	}
-	free_list(stack);
+/*	free_list(stack);*/
 return (0);
 }

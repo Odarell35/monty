@@ -21,11 +21,11 @@ void error_two(char *file)
  * @line_number: line number
  * @arr_command: commands
  */
-void error_three(unsigned int line_number, char **arr_command)
+/*void error_three(unsigned int line_number, char *arr_command)
 {
 	printf("L%d: unknown instruction %s\n", line_number, arr_command[0]);
 	exit(EXIT_FAILURE);
-}
+}*/
 /**
  * error_four - malloc failed
  */
