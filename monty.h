@@ -82,4 +82,7 @@ int _isdigit(char *str);
 void swap(stack_t **stack, unsigned int line_number);
 /*prototype for add*/
 void add(stack_t **stack, unsigned int line_number);
+/*prototype sub*/
+void get_sub(stack_t **stack, unsigned int line_number);
+
 #endif
