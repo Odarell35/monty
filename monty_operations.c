@@ -20,6 +20,7 @@ int monty_op(stack_t **stack)
 		{"swap", swap},
 		{"div", div_data},
 		{"mul", mul},
+		{"sub", get_sub},
 		{NULL, NULL},
 	};
 
