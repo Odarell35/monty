@@ -84,12 +84,8 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 /*prototype sub*/
 void get_sub(stack_t **stack, unsigned int line_number);
-<<<<<<< HEAD
 /*prototype for mul*/
 void mul(stack_t **stack, unsigned int line_number);
 /*prototype for div*/
 void div_data(stack_t **stack, unsigned int line_number);
-=======
-
->>>>>>> 63af32bbbb8cf67d0c269bc4a4ba2f01a4e169ec
 #endif
