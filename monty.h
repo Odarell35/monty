@@ -47,6 +47,7 @@ typedef struct instruction_s
 typedef struct details_s
 {
 	char **arr_command;
+	char **arr_op;
 	FILE *fd;
 	char *buf;
 	unsigned int line_number;
@@ -65,6 +66,8 @@ void swap(stack_t **stack, unsigned int line_number);
 stack_t *add_dnodeint(stack_t **head, const int n);
 int monty_op(stack_t **stack);
 int read_montyfile(char *file);
+void free_details(void);
+void free_stack(stack_t *stack);
 /*protypes for error msg*/
 void error_one(void);
 void error_two(char *file);

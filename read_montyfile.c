@@ -25,22 +25,26 @@ int read_montyfile(char *file)
 			error_two(file);
 	while ((n_read = getline(&details.buf, &buf_size, details.fd)) != -1)
 	{
-		if (*details.buf == '\n')
-			continue;
-		details.line_number++;
-		token = strtok(details.buf, "\n\t\a");
-			i = 0;
-			while (token)
+		if (*details.buf != '\n')
+		{
+			details.line_number++;
+			token = strtok(details.buf, " \n\t");
+			if (token  == NULL)
+			{
+				free(details.buf);
+				continue;
+			}
+			for (i = 0; token != NULL; i++)
 			{
 				details.arr_command[i] = token;
-				i++;
-				token = strtok(NULL, "\n\t\a");
+				token = strtok(NULL, " \n\t");
 			}
 			details.arr_command[i] = NULL;
 			monty_op(&stack);
+		}
 	}
-/*	free_list(stack);*/
-	free(details.buf);
+	free_details();
+	free_stack(stack);
 	fclose(details.fd);
 return (0);
 }

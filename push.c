@@ -12,19 +12,23 @@
  */
 void get_push(stack_t **stack, unsigned int line_number) 
 {
+	stack_t *new_node;	
 	int value;
-	stack_t *new_node = malloc(sizeof(stack_t));
+	(void) line_number;
+	
+	new_node = malloc(sizeof(stack_t));
 
-	if (!isdigit(details.arr_command[1]))
+	/*if (!isdigit(details.arr_command[1]))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
-	}
+	}*/
 
 
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		free_stack(new_node);
 		exit(EXIT_FAILURE);
 	}
 	
