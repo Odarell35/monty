@@ -23,7 +23,8 @@ void error_two(char *file)
  void error_three(void)
  {
  	fprintf(stderr, "L%d: unknown instruction %s\n", details.line_number, details.arr_command[0]);
- 	exit(EXIT_FAILURE);
+	free_details();
+	exit(EXIT_FAILURE);
  }
  
 
