@@ -13,7 +13,7 @@ int monty_op(stack_t **stack)
 		{"pall", pall_data},
 		{"pint", pint_data},
 		{"pop", pop_data},
-		{"nop", NULL},
+		{"nop", nop_data},
 		{"add", add},
 		{"#", NULL},
 		{"push", get_push},
