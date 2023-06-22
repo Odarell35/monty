@@ -4,10 +4,9 @@
  *@line_number: line number
  *Return: void
  */
-void error_six(unsigned int line_number)
+void error_six(void)
 {
-	line_number = 1;
 
-	printf("L%d: can't pop an empty stack\n", line_number);
+	printf("L%d: can't pop an empty stack\n", details.line_number);
 	exit(EXIT_FAILURE);
 }

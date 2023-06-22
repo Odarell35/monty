@@ -74,7 +74,7 @@ void error_two(char *file);
 void error_three(void);
 void error_four(void);
 void error_five(unsigned int line_number);
-void error_six(unsigned int line_number);
+void error_six(void);
 /*prototype for push*/
 void get_push(stack_t **stack, unsigned int line_number);
 int _isdigit(char *str);
