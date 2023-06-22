@@ -18,9 +18,8 @@ void error_two(char *file)
 }
 /**
  * error_three - unknown instructions
- * @line_number: line number
- * @arr_command: commands
- */
+ * Return: void
+ * */
  void error_three(void)
  {
  	fprintf(stderr, "L%d: unknown instruction %s\n", details.line_number, details.arr_command[0]);
@@ -40,8 +39,9 @@ void error_four(void)
  * error_five- If the stack is empty
  * @line_number: line number
  */
-void error_five(unsigned int line_number)
+void error_five(void)
 {
-	fprintf(stderr, "L%d: can't pint, stack empty", line_number);
+	fprintf(stderr, "L%d: can't pint, stack empty", details.line_number);
+	free_details();
 	exit(EXIT_FAILURE);
 }

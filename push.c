@@ -21,6 +21,7 @@ void get_push(stack_t **stack, unsigned int line_number)
 	if (_isdigit(details.arr_command[1]) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free_details();
 		exit(EXIT_FAILURE);
 	}
 

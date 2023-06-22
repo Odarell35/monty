@@ -6,9 +6,8 @@
  */
 void pint_data(stack_t **stack, unsigned int line_number)
 {
-	line_number = 1;
-
+	(void)line_number;
 	if (*stack == NULL)
-		error_five(line_number);
+		error_five();
 	printf("%d\n", (*stack)->n);
 }
