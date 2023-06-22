@@ -8,5 +8,6 @@ void error_six(void)
 {
 
 	printf("L%d: can't pop an empty stack\n", details.line_number);
+	free_details();
 	exit(EXIT_FAILURE);
 }
