@@ -4,7 +4,7 @@
  * @stack: points to the stack
  * @line_number: the line number
  */
-void div(stack_t **stack, unsigned int line_number)
+void div_data(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 

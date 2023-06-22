@@ -87,6 +87,5 @@ void get_sub(stack_t **stack, unsigned int line_number);
 /*prototype for mul*/
 void mul(stack_t **stack, unsigned int line_number);
 /*prototype for div*/
-void div(stack_t **stack, unsigned int line_number);
-
+void div_data(stack_t **stack, unsigned int line_number);
 #endif
