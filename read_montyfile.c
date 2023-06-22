@@ -40,6 +40,8 @@ int read_montyfile(char *file)
 				token = strtok(NULL, " \n\t");
 			}
 			details.arr_command[i] = NULL;
+			if (**details.arr_command == '#')
+				return (-1);
 			monty_op(&stack);
 		}
 	}
