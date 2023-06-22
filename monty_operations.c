@@ -18,6 +18,8 @@ int monty_op(stack_t **stack)
 		{"#", nop_data},
 		{"push", get_push},
 		{"swap", swap},
+		{"div", div},
+		{"mul", mul},
 		{NULL, NULL},
 	};
 
