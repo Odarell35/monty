@@ -18,11 +18,11 @@ void get_push(stack_t **stack, unsigned int line_number)
 	
 	new_node = malloc(sizeof(stack_t));
 
-	/*if (!isdigit(details.arr_command[1]))
+	if (_isdigit(details.arr_command[1]) == 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
-	}*/
+	}
 
 
 	if (new_node == NULL)
