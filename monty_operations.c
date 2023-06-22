@@ -21,7 +21,6 @@ int monty_op(stack_t **stack)
 		{"div", div_data},
 		{"mul", mul},
 		{"sub", get_sub},
-		{"mod", get_mod},
 		{NULL, NULL},
 	};
 
